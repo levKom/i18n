@@ -1,0 +1,99 @@
+{
+  "baseUrl": ".",
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "esnext",
+    "module": "es2015",
+    "paths": {
+      "@//*": ["src/*"],
+      "@/": [
+        "src/index.js",
+        "src/index.json",
+        "src/index.vue",
+        "src/index.scss",
+        "src/index.css"
+      ],
+      "@router/*": ["src/router/*"],
+      "@router": [
+        "src/router/index.js",
+        "src/router/index.json",
+        "src/router/index.vue",
+        "src/router/index.scss",
+        "src/router/index.css"
+      ],
+      "@views/*": ["src/views/*"],
+      "@views": [
+        "src/views/index.js",
+        "src/views/index.json",
+        "src/views/index.vue",
+        "src/views/index.scss",
+        "src/views/index.css"
+      ],
+      "@components/*": ["src/components/*"],
+      "@components": [
+        "src/components/index.js",
+        "src/components/index.json",
+        "src/components/index.vue",
+        "src/components/index.scss",
+        "src/components/index.css"
+      ],
+      "@assets/*": ["src/assets/*"],
+      "@assets": [
+        "src/assets/index.js",
+        "src/assets/index.json",
+        "src/assets/index.vue",
+        "src/assets/index.scss",
+        "src/assets/index.css"
+      ],
+      "@utils/*": ["src/utils/*"],
+      "@utils": [
+        "src/utils/index.js",
+        "src/utils/index.json",
+        "src/utils/index.vue",
+        "src/utils/index.scss",
+        "src/utils/index.css"
+      ],
+      "@store/*": ["src/store/*"],
+      "@store": [
+        "src/store/index.js",
+        "src/store/index.json",
+        "src/store/index.vue",
+        "src/store/index.scss",
+        "src/store/index.css"
+      ],
+      "@services/*": ["src/services/*"],
+      "@services": [
+        "src/services/index.js",
+        "src/services/index.json",
+        "src/services/index.vue",
+        "src/services/index.scss",
+        "src/services/index.css"
+      ],
+      "@plugins/*": ["src/plugins/*"],
+      "@plugins": [
+        "src/plugins/index.js",
+        "src/plugins/index.json",
+        "src/plugins/index.vue",
+        "src/plugins/index.scss",
+        "src/plugins/index.css"
+      ],
+      "@styles/*": ["src/styles/*"],
+      "@styles": [
+        "src/styles/index.js",
+        "src/styles/index.json",
+        "src/styles/index.vue",
+        "src/styles/index.scss",
+        "src/styles/index.css"
+      ],
+      "@mixins/*": ["src/mixins/*"],
+      "@mixins": [
+        "src/mixins/index.js",
+        "src/mixins/index.json",
+        "src/mixins/index.vue",
+        "src/mixins/index.scss",
+        "src/mixins/index.css"
+      ]
+    }
+  }
+}
