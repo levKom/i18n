@@ -14,6 +14,7 @@ const aliases = {
   '@plugins': 'src/plugins',
   '@styles': 'src/styles',
   '@mixins': 'src/mixins',
+  '@config': 'src/config',
 }
 
 module.exports = {

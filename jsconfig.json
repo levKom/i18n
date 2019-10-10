@@ -93,6 +93,14 @@
         "src/mixins/index.vue",
         "src/mixins/index.scss",
         "src/mixins/index.css"
+      ],
+      "@config/*": ["src/config/*"],
+      "@config": [
+        "src/config/index.js",
+        "src/config/index.json",
+        "src/config/index.vue",
+        "src/config/index.scss",
+        "src/config/index.css"
       ]
     }
   }
