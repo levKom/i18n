@@ -10,10 +10,48 @@
  * Boot files are your "main.js"
  **/
 
-
 import Vue from 'vue'
 
-import {Quasar,QLayout,QHeader,QDrawer,QPageContainer,QPage,QToolbar,QToolbarTitle,QBtn,QIcon,QList,QItem,QItemSection,QItemLabel,QMarkupTable,QSpinner,Ripple,Loading} from 'quasar'
+import {
+  Quasar,
+  QLayout,
+  QHeader,
+  QDrawer,
+  QPageContainer,
+  QPage,
+  QToolbar,
+  QToolbarTitle,
+  QBtn,
+  QIcon,
+  QList,
+  QItem,
+  QItemSection,
+  QItemLabel,
+  QMarkupTable,
+  QSpinner,
+  Ripple,
+  Loading,
+} from 'quasar'
 
-
-Vue.use(Quasar, { config: {"loading":{}},components: {QLayout,QHeader,QDrawer,QPageContainer,QPage,QToolbar,QToolbarTitle,QBtn,QIcon,QList,QItem,QItemSection,QItemLabel,QMarkupTable,QSpinner},directives: {Ripple},plugins: {Loading} })
+Vue.use(Quasar, {
+  config: { loading: {} },
+  components: {
+    QLayout,
+    QHeader,
+    QDrawer,
+    QPageContainer,
+    QPage,
+    QToolbar,
+    QToolbarTitle,
+    QBtn,
+    QIcon,
+    QList,
+    QItem,
+    QItemSection,
+    QItemLabel,
+    QMarkupTable,
+    QSpinner,
+  },
+  directives: { Ripple },
+  plugins: { Loading },
+})
