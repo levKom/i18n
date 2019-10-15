@@ -1,21 +1,18 @@
 <template>
-  <div>
-    <!-- <p>{{ $t('hello') }}</p> -->
-    <a href="#" @click="setLocale('en')">
-      <flag iso="us"></flag>
-    </a>
-    <a href="#" @click="setLocale('ru')">
-      <flag iso="ru"></flag>
-    </a>
-    <br />
-    <br />
-    <p>{{ $t('message') }}</p>
-    <p>
-      <i18n path="compText">
-        <br place="break" />
-        <a href="#" target="_blank" rel="noopener" place="action">{{ $t('compTextUrlName') }}</a>
-      </i18n>
-    </p>
+  <div class="main-content">
+    <div class="nav-content">
+      <a href="#" @click="setLocale('en')">
+        <flag iso="us"></flag>
+      </a> | 
+      <a href="#" @click="setLocale('ru')">
+        <flag iso="ru"></flag>
+      </a>
+      <nav>
+        <router-link to="test">Test</router-link> | 
+        <router-link to="json_data">Json Data</router-link>
+      </nav>
+    </div>
+    <router-view />
   </div>
 </template>
 
@@ -32,4 +29,9 @@ export default {
 </script>
 
 <style lang="scss">
+.nav-content {
+  max-width: 960px;
+  margin: 20px auto;
+  text-align: center;
+}
 </style>
