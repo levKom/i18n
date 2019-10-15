@@ -1,12 +1,14 @@
 <template>
 <div>
   <p>{{ $t('hello') }}</p>
+  <q-btn color="white" text-color="black" label="Standard" />
+  <button>LOA</button>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloI18n'
+  name: 'MainPage'
 }
 </script>
 

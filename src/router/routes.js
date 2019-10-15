@@ -1,8 +1,8 @@
-import HelloI18n from '@components/HelloI18n'
+import MainPage from '@components/MainPage'
 
 export const routes = [
   {
     path: '/',
-    component: HelloI18n,
+    component: MainPage,
   },
 ]
