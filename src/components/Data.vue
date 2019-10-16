@@ -1,11 +1,5 @@
 <template>
   <div class="main">
-    <div>
-      <div v-for="user in users" :key="user.id">
-        {{ user.id }} :
-        <input type="text" :value="user.name" @change="changes(user.id)" />
-      </div>
-    </div>
     <b-table-simple striped class="main__table">
       <thead>
         <tr>
@@ -30,22 +24,6 @@ import jsonData from '../assets/data.json';
 
 export default {
   name: 'Data',
-
-  data() {
-    return {
-      users: [
-        {
-          id: 1,
-          name: 'one',
-        },
-        {
-          id: 2,
-          name: 'two',
-        },
-      ],
-      currentUser: '',
-    };
-  },
 
   computed: {
     tickets() {

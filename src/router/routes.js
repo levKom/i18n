@@ -8,12 +8,12 @@ export const routes = [
     component: MainPage,
     children: [
       {
-        path: 'json_data',
-        component: Data,
+        path: '',
+        component: Test,
       },
       {
-        path: 'test',
-        component: Test,
+        path: 'json_data',
+        component: Data,
       },
     ],
   },

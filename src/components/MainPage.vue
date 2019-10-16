@@ -1,14 +1,14 @@
 <template>
   <div class="main-content">
     <div class="nav-content">
-      <a href="#" @click="setLocale('en')">
+      <button @click="setLocale('en')">
         <flag iso="us"></flag>
-      </a> | 
-      <a href="#" @click="setLocale('ru')">
+      </button>
+      <button @click="setLocale('ru')">
         <flag iso="ru"></flag>
-      </a>
+        </button>
       <nav>
-        <router-link to="test">Test</router-link> | 
+        <router-link to="/">Test</router-link> | 
         <router-link to="json_data">Json Data</router-link>
       </nav>
     </div>
@@ -20,9 +20,14 @@
 export default {
   name: 'MainPage',
 
+  created () {
+    this.setLocale(localStorage.getItem('locale'));
+  },
+
   methods: {
     setLocale(locale) {
-      this.$i18n.locale = locale
+      this.$i18n.locale = locale;
+      localStorage.setItem('locale', String(locale));
     },
   },
 }
