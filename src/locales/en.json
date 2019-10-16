@@ -1,5 +1,7 @@
 {
   "message": "english text !!",
   "compText": "some complicated text with {break} break and this action: {action}",
-  "compTextUrlName": "action link"
+  "compTextUrlName": "action link",
+  "pageTest": "Test",
+  "pageData": "DB Data"
 }

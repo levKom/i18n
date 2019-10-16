@@ -1,15 +1,24 @@
 <template>
   <div class="main-content">
     <div class="nav-content">
-      <button @click="setLocale('en')">
-        <flag iso="us"></flag>
-      </button>
-      <button @click="setLocale('ru')">
-        <flag iso="ru"></flag>
-        </button>
+      <q-btn
+        v-if="currentLocale === 'ru'"
+        label="Eng"
+        @click="updateLocale('en')"
+      >
+        <flag iso="us" />
+      </q-btn>
+
+      <q-btn
+        v-if="currentLocale === 'en'"
+        label="Rus"
+        @click="updateLocale('ru')"
+      >
+        <flag iso="ru" />
+      </q-btn>
       <nav>
-        <router-link to="/">Test</router-link> | 
-        <router-link to="json_data">Json Data</router-link>
+        <router-link to="/">{{ $t('pageTest') }}</router-link> | 
+        <router-link to="json_data">{{ $t('pageData') }}</router-link>
       </nav>
     </div>
     <router-view />
@@ -17,18 +26,28 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex';
+
 export default {
   name: 'MainPage',
 
+  computed: mapState([
+    'currentLocale',
+  ]),
+
   created () {
-    this.setLocale(localStorage.getItem('locale'));
+    if (localStorage.getItem('locale') !== null) {
+      this.updateLocale(localStorage.getItem('locale'));
+    } else {
+      this.updateLocale(this.$i18n.fallbackLocale);
+    }
   },
 
   methods: {
-    setLocale(locale) {
-      this.$i18n.locale = locale;
-      localStorage.setItem('locale', String(locale));
-    },
+    ...mapMutations([
+      'updateLocale',
+    ]),
+
   },
 }
 </script>
@@ -38,5 +57,16 @@ export default {
   max-width: 960px;
   margin: 20px auto;
   text-align: center;
+  height: 70px;
+
+  button {
+    margin-bottom: 10px;
+    
+    .flag-icon {
+      margin-left: 5px;
+    }
+  }
+  
+
 }
 </style>

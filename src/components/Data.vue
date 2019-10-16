@@ -67,11 +67,15 @@ export default {
 @import '@styles/quasar.variables';
 
 .main {
+  * {
+    box-sizing: border-box;
+  }
+
   padding: 0;
 
   &__table {
     // height: calc(100vh - #{$headerHeigth});
-    height: calc(100vh - 88px);
+    height: calc(100vh - 110px);
     background: red;
   }
 }
