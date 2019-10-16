@@ -4,7 +4,7 @@
       <q-btn
         v-if="currentLocale === 'ru'"
         label="Eng"
-        @click="updateLocale('en')"
+        @click="setLocale('en')"
       >
         <flag iso="us" />
       </q-btn>
@@ -12,7 +12,7 @@
       <q-btn
         v-if="currentLocale === 'en'"
         label="Rus"
-        @click="updateLocale('ru')"
+        @click="setLocale('ru')"
       >
         <flag iso="ru" />
       </q-btn>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 export default {
   name: 'MainPage',
@@ -36,12 +36,12 @@ export default {
   ]),
 
   created () {
-    this.updateLocale(localStorage.getItem('locale'));
+    this.setLocale(localStorage.getItem('locale'));
   },
 
   methods: {
-    ...mapMutations([
-      'updateLocale',
+    ...mapActions([
+      'setLocale',
     ]),
 
   },

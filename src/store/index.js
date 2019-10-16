@@ -9,22 +9,31 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    currentLocale: localStorage.getItem('locale'),
+    currentLocale: '',
   },
 
   mutations: {
     updateLocale(state, newLocale) {
-      if (newLocale !== null) {
-        state.currentLocale = newLocale
-        i18n.locale = newLocale
-        localStorage.setItem('locale', String(newLocale))
-      } else {
-        state.currentLocale = i18n.fallbackLocale;
-      }
+      state.currentLocale = newLocale;
     },
   },
 
-  actions: {},
+  actions: {
+    setLocale(context, newLocale) {
+      let locale = '';
+
+      if (newLocale !== null) {
+        locale = newLocale
+        i18n.locale = newLocale
+        localStorage.setItem('locale', String(newLocale))
+      } else {
+        locale = i18n.fallbackLocale;
+        i18n.locale = i18n.fallbackLocale;
+      };
+
+      context.commit('updateLocale', locale);
+    }
+  },
 
   modules: {
     jsonData,
