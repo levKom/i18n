@@ -36,11 +36,7 @@ export default {
   ]),
 
   created () {
-    if (localStorage.getItem('locale') !== null) {
-      this.updateLocale(localStorage.getItem('locale'));
-    } else {
-      this.updateLocale(this.$i18n.fallbackLocale);
-    }
+    this.updateLocale(localStorage.getItem('locale'));
   },
 
   methods: {

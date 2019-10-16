@@ -14,9 +14,13 @@ export default new Vuex.Store({
 
   mutations: {
     updateLocale(state, newLocale) {
-      state.currentLocale = newLocale
-      i18n.locale = newLocale
-      localStorage.setItem('locale', String(newLocale))
+      if (newLocale !== null) {
+        state.currentLocale = newLocale
+        i18n.locale = newLocale
+        localStorage.setItem('locale', String(newLocale))
+      } else {
+        state.currentLocale = i18n.fallbackLocale;
+      }
     },
   },
 
