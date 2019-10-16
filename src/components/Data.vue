@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <b-table-simple striped class="main__table">
+    <q-markup-table class="main__table">
       <thead>
         <tr>
           <th v-for="(ticket, index) in Object.keys(tickets[0])" :key="index">
@@ -15,7 +15,7 @@
           </td>
         </tr>
       </tbody>
-    </b-table-simple>
+    </q-markup-table>
   </div>
 </template>
 
@@ -70,7 +70,9 @@ export default {
   padding: 0;
 
   &__table {
-    height: calc(100vh - #{$headerHeigth});
+    // height: calc(100vh - #{$headerHeigth});
+    height: calc(100vh - 88px);
+    background: red;
   }
 }
 </style>

@@ -7,6 +7,7 @@ import {
   Quasar,
   QLayout,
   QBtn,
+  QMarkupTable,
 } from 'quasar'
 
 Vue.use(Quasar, {
@@ -14,6 +15,7 @@ Vue.use(Quasar, {
   components: {
     QLayout,
     QBtn,
+    QMarkupTable,
   },
   directives: {},
   plugins: {},
